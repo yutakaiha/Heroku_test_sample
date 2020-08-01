@@ -4,12 +4,154 @@
     <title>MessageCrudApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+  <form>
+    <div class="form-group">
+      <label class="control-label">カスタムチェックボックスのサンプル</label>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check1" checked>
+        <label for="custom-check1" class="custom-control-label">チェック１</label>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check２" >
+        <label for="custom-check２" class="custom-control-label">チェック２</label>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check３" >
+        <label for="custom-check３" class="custom-control-label">チェック３</label>
+      </div>
+    </div>
+  
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label class="control-label">カスタムチェックボックスのサンプル</label>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="custom-switch1" checked>
+        <label for="custom-switch1" class="custom-control-label">チェック１</label>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="custom-switch２" >
+        <label for="custom-switch２" class="custom-control-label">チェック２</label>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="custom-switch３" >
+        <label for="custom-switch３" class="custom-control-label">チェック３</label>
+      </div>
+    </div>
+  
+  </form>
+
+  <form>
+    <div class="form-row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="苗字">
+      </div> 
+      <div class="col">
+        <input type="text" class="form-control" placeholder="名前">
+      </div>
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="region">地域を選択</label>
+      <select class="custom-select" name="地域" id="region">
+        <option>アジア</option>
+        <option>アフリカ</option>
+        <option>オセアニア</option>
+        <option>ヨーロッパ</option>
+        <option>中近東</option>
+        <option>北米</option>
+        <option>中南米</option>
+      </select>
+    </div>
+  </form>
+  <hr>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">@</span>
+    </div>
+    <input type="text" class="form-control" placeholder="ハンドルネーム" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="メールユーザーネーム" aria-label="Mailusername" aria-describedby="Mailaddress">
+    <div class="input-group-append">
+      <span class="input-group-text" id="Mailaddress">@gmail.com</span>
+    </div>
+  </div>
+  
+  <label for="basic-url">バニティURL</label>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+    </div>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+  </div>
+
+    <button type="button" class="btn btn-outline-info">primary</button>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+      </label>
+    </div>
+
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">NO</th>
+          <th scope="col">名字</th>
+          <th scope="col">名前</th>
+          <th scope="col">ニックネーム</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>赤木</td>
+          <td>健介</td>
+          <td>ゴリ</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>高島</td>
+          <td>勇気</td>
+          <td>さる</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>比嘉</td>
+          <td>敬浩</td>
+          <td>ヨーゲー</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-md-block d-none bg-primary">
+      <h1 class="text-center">table-striped</h1>
+      <h1 class="text-center">画面幅７６８px以上のとき表示</h1>
+    </div>
+    <hr>
+    <div class="d-lg-none d-block bg-primary"> 
+      <h1 class="text-center">929px以下に表示</h1>
+    </div>
+    <hr>
+    <div class="d-lg-none d-none d-md-block bg-success">
+      <h1 class="text-center">md〜lgのときに表示</h1>
+    </div>
+
     <%= yield %>
   </body>
 </html>
